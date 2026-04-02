@@ -17,6 +17,9 @@ struct SettingsView: View {
             Tab("Devices", systemImage: "hifispeaker.2") {
                 DevicesTab()
             }
+            Tab("About", systemImage: "info.circle") {
+                AboutTab()
+            }
         }
         .frame(width: 460, height: 320)
     }
@@ -175,5 +178,47 @@ struct DevicesTab: View {
     private func deleteKeyword(at offsets: IndexSet) {
         keywords.remove(atOffsets: offsets)
         saveKeywords()
+    }
+}
+
+// MARK: - About Tab
+
+struct AboutTab: View {
+    var appVersion: String {
+        Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "Unknown"
+    }
+
+    var body: some View {
+        VStack(spacing: 16) {
+            Image(systemName: "infinity")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 48, height: 48)
+                .foregroundStyle(.tint)
+            
+            VStack(spacing: 4) {
+                Text("PingSound")
+                    .font(.title2)
+                    .fontWeight(.bold)
+                
+                Text("Version \(appVersion)")
+                    .font(.subheadline)
+                    .foregroundStyle(.secondary)
+            }
+            
+            Text("A lightweight utility to prevent Bluetooth speakers from entering deep sleep.")
+                .font(.callout)
+                .multilineTextAlignment(.center)
+                .foregroundStyle(.secondary)
+                .padding(.horizontal, 32)
+            
+            Spacer()
+            
+            Link("View on GitHub", destination: URL(string: "https://github.com/HALIndex/PingSound")!)
+                .buttonStyle(.link)
+                .padding(.bottom)
+        }
+        .padding(.top, 32)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
