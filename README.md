@@ -44,8 +44,9 @@ Click the menu bar icon and select **Preferences...**
 
 ## ⚙️ Requirements
 
-- **macOS 26.0** or newer.
-- Xcode 26+ for building the project.
+- macOS 15 or newer.
+- Xcode 16+ for building the project.
+- *Note: Developed and tested on macOS 26 and Xcode 26.*
 
 ## 📄 License
 
