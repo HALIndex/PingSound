@@ -1,7 +1,7 @@
 # PingSound ♾️
 
-![macOS v26.0+](https://img.shields.io/badge/macOS-26.0%2B-blue)
-![Swift 6.2+](https://img.shields.io/badge/Swift-6.2%2B-orange)
+![macOS 15+](https://img.shields.io/badge/macOS-15%2B-blue)
+![Swift 5](https://img.shields.io/badge/Swift-5-orange)
 ![License MIT](https://img.shields.io/badge/License-MIT-green)
 
 **PingSound** is a lightweight, strictly menu-bar macOS utility designed to solve a specific, frustrating problem: **Bluetooth speakers (like Marshall Acton III, etc.) going into deep sleep or disconnecting automatically** when no audio is played for a certain period of time.
